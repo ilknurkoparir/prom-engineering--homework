@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Seçimi - İlknur Restoran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-background">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1>Pizza Seçimi</h1>
+            <br>
+            <p style="color: black;">Pizza türünüzü seçiniz.</p>
+            
+            <!-- Pizza türleri -->
+            <div class="food-options">
+                <div class="food-item">
+                    <input type="checkbox" id="margherita" class="food-checkbox">
+                    <label for="margherita" class="food-label">Margherita Pizza - 180₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="pepperoni" class="food-checkbox">
+                    <label for="pepperoni" class="food-label">Pepperoni Pizza - 195₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="vegetarian" class="food-checkbox">
+                    <label for="vegetarian" class="food-label">Vejetaryen Pizza - 100₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="hawaiian" class="food-checkbox">
+                    <label for="hawaiian" class="food-label">Hawaiian Pizza - 200₺</label>
+                </div>
+            </div>
+
+            <!-- Sos seçenekleri -->
+            <div class="sauce-options">
+                <p>Sos Seçimi:</p>
+                <div class="sauce-item">
+                    <input type="checkbox" id="garlic-sauce" class="food-checkbox">
+                    <label for="garlic-sauce" class="food-label">Sarımsak Sosu - 10₺</label>
+                </div>
+                <div class="sauce-item">
+                    <input type="checkbox" id="olive-oil" class="food-checkbox">
+                    <label for="olive-oil" class="food-label">Zeytinyağlı Sos - 10₺</label>
+                </div>
+                <div class="sauce-item">
+                    <input type="checkbox" id="tomato-sauce" class="food-checkbox">
+                    <label for="tomato-sauce" class="food-label">Domates Sosu - 5₺</label>
+                </div>
+            </div>
+
+            <!-- Siparişi Tamamla Butonu -->
+            <div class="complete-order-container">
+                <button class="complete-order-btn" onclick="return checkSelection()">Siparişi Tamamla</button>
+            </div>
+        </div>
+    </div>
+        <!-- JavaScript dosyasını ekleyin -->
+        <script src="error.js"></script>
+</body>
+</html>

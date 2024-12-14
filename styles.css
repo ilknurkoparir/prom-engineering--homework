@@ -1,0 +1,298 @@
+/* Genel sıfırlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Arka plan resmini ve genel stil */
+.background, .menu-background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url('https://source.unsplash.com/1600x900/?restaurant,food') no-repeat center center/cover; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Görselin üzerine yarı şeffaf kaplama */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+/* İçerik kutusunun stilini ayarlıyoruz */
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 69, 0, 0.8); /* Canlı turuncu tonunda arka plan */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Başlık animasyonu */
+.animated-title {
+    font-size: 3em;
+    color: #FFD700; /* Altın sarısı tonları */
+    animation: slideIn 2s ease-out;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Alt başlık için animasyon */
+.sub-title {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Buton stilini ayarlıyoruz */
+.continue-btn {
+    background-color: #4CAF50; /* Yeşil buton rengi */
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.3em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.continue-btn:hover {
+    background-color: #45a049; /* Daha koyu yeşil hover rengi */
+}
+
+.continue-btn .button-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.continue-btn:focus {
+    outline: none;
+}
+
+/* Yemek seçenekleri butonları */
+.food-btn {
+    margin: 10px;
+    background-color: #1E90FF; /* Canlı mavi buton rengi */
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.food-btn:hover {
+    background-color: #4682B4; /* Daha koyu mavi hover rengi */
+}
+
+/* Hamburger türleri düzeni */
+.food-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    width: 45%;
+}
+
+.food-label {
+    font-size: 1.3em;
+    margin-left: 10px;
+}
+
+/* Sos seçenekleri düzeni */
+
+.sauce-options p {
+    font-size: 1.5em;
+    margin-bottom: 20px; /* Başlık ile sos seçenekleri arasında boşluk */
+    font-weight: bold;
+    color: white;
+}
+
+/* Sos seçenekleri düzeni */
+.sauce-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;  /* Soslar arasına daha geniş boşluk ekliyoruz */
+    margin-top: 20px;
+}
+
+/* Sos item'ları */
+.sauce-item {
+    display: flex;
+    align-items: center;
+}
+
+.sauce-item input {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+.sauce-item label {
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+}
+
+/* Hamburger ve soslar için checkbox stilleri */
+.food-checkbox {
+    transform: scale(1.5);
+}
+/* Siparişi Tamamla Butonu */
+.complete-order-container {
+    text-align: center;
+    margin-top: 30px;  /* Buton ile diğer içerikler arasına boşluk */
+}
+
+.complete-order-btn {
+    background-color: #FFD700;  /* Altın sarısı renk */
+    color: black;
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.complete-order-btn:hover {
+    background-color: #5cff47;  /* Hover rengi turuncu */
+}
+
+.complete-order-btn:focus {
+    outline: none;
+}
+/* Sipariş Tamamlandı Sayfası */
+.order-completed-background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0, 128, 0, 0.8);  /* Yeşil arka plan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sipariş tamamlandığında görünümü düzenliyoruz */
+.container {
+    padding: 50px;
+    background-color: rgba(255, 69, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.order-completed-background h1 {
+    font-size: 3em;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.order-completed-background p {
+    font-size: 1.5em;
+    color: #fffefe;
+    margin-bottom: 30px;
+}
+
+/* Geri Dönüş Butonu */
+.back-btn {
+    background-color: #4CAF50;  /* Yeşil renk */
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.3em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #45a049;  /* Daha koyu yeşil hover rengi */
+}
+
+.back-btn:focus {
+    outline: none;
+}
+
+/* Mobil uyumlu tasarım */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .animated-title {
+        font-size: 2.5em;
+    }
+
+    .sub-title {
+        font-size: 1.3em;
+    }
+
+    .food-btn {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+
+    .continue-btn {
+        font-size: 1.2em;
+    }
+
+    .food-label {
+        font-size: 1.2em;
+    }
+
+    .sauce-item label {
+        font-size: 1.2em;
+    }
+}

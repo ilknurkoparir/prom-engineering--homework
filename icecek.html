@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makarna Seçimi - İlknur Restoran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-background">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1>İçecek Seçimi</h1>
+            <br>
+            <p style="color: black;">İçecek türünüzü seçiniz.</p>
+            
+            <!-- Makarna türleri -->
+            <div class="food-options">
+                <div class="food-item">
+                    <input type="checkbox" id="carbonara" class="food-checkbox">
+                    <label for="carbonara" class="food-label">Kola - 40₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="bolognese" class="food-checkbox">
+                    <label for="bolognese" class="food-label">Su - 10₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="pesto" class="food-checkbox">
+                    <label for="pesto" class="food-label">Sprite - 40₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="lasagna" class="food-checkbox">
+                    <label for="lasagna" class="food-label">Fanta - 40₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="lasagna" class="food-checkbox">
+                    <label for="lasagna" class="food-label">Ayran - 20₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="lasagna" class="food-checkbox">
+                    <label for="lasagna" class="food-label">Maden Suyu - 20₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="lasagna" class="food-checkbox">
+                    <label for="lasagna" class="food-label">Mayve Suyu - 20₺</label>
+                </div>
+                <div class="food-item">
+                    <input type="checkbox" id="lasagna" class="food-checkbox">
+                    <label for="lasagna" class="food-label">Gazoz - 30₺</label>
+                </div>
+            </div>
+
+          
+            <!-- Siparişi Tamamla Butonu -->
+            <div class="complete-order-container">
+                <button class="complete-order-btn" onclick="return checkSelection()">Siparişi Tamamla</button>
+            </div>
+        </div>
+    </div>
+        <!-- JavaScript dosyasını ekleyin -->
+        <script src="error.js"></script>
+</body>
+</html>
